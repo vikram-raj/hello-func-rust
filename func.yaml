@@ -1,0 +1,25 @@
+specVersion: 0.34.0
+name: hello-func-rust
+runtime: rust
+registry: quay.io/viraj_1
+image: quay.io/viraj_1/hello-func-rust:latest
+imageDigest: sha256:aa497161d2bdf5b07579c108acd1b2a498c30d30e463ff7257257f9182998929
+created: 2022-11-16T16:39:29.271648034+05:30
+invocation:
+  format: http
+build:
+  buildpacks:
+  - docker.io/paketocommunity/rust
+  builder: pack
+  buildEnvs: []
+run:
+  volumes: []
+  envs: []
+deploy:
+  namespace: viraj
+  annotations: {}
+  options: {}
+  labels: []
+  healthEndpoints:
+    liveness: /health/liveness
+    readiness: /health/readiness

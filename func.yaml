@@ -10,7 +10,7 @@ invocation:
 build:
   buildpacks:
   - docker.io/paketocommunity/rust
-  builder: pack
+  builder: s2i
   buildEnvs: []
 run:
   volumes: []
